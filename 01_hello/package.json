@@ -1,0 +1,25 @@
+{
+  "name": "hello.electron",
+  "version": "1.0.0",
+  "description": "electron examples",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gseismic/hello.electron.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/gseismic/hello.electron/issues"
+  },
+  "homepage": "https://github.com/gseismic/hello.electron#readme",
+  "devDependencies": {
+    "electron": "^41.1.1"
+  }
+}

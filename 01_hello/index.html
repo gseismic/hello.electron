@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8" />
+        <title>我的 Electron 应用</title>
+        <style>
+            body {
+                font-family: sans-serif;
+                text-align: center;
+                padding: 50px;
+            }
+            button {
+                padding: 10px 20px;
+                font-size: 16px;
+                cursor: pointer;
+            }
+            #version {
+                color: #007acc;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Hello Electron!</h1>
+        <p>当前应用版本：<span id="version">加载中...</span></p>
+        <button id="btn">获取版本信息</button>
+
+        <script>
+            const btn = document.getElementById("btn");
+            const versionSpan = document.getElementById("version");
+
+            btn.addEventListener("click", async () => {
+                // 调用 preload.js 中暴露的方法
+                const version = await window.electronAPI.getAppVersion();
+                versionSpan.innerText = version;
+            });
+        </script>
+    </body>
+</html>
